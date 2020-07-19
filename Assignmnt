@@ -1,0 +1,35 @@
+
+
+object CaesarCipher {  
+   def main(args: Array[String]) {  
+        functionExample()           
+    }  
+    def EncryptorDecrypt()  {        
+	  
+
+	  val alphabet = "abcdefghijklmnopqrstuvwxyz"
+  
+          println("Enter the message to encrypt:")
+	  val tx=readLine()
+
+	  println("Enter the shift:")
+	  val sh=(readLine().toInt + 26) % 26 
+		
+	  val encryptxt=tx.map( (s:Char) => {
+		val k=alphabet.indexOf(s.toLower)
+
+		if(k==-1){
+		   s
+	  	}
+
+		else{
+		alphabet((k+sh) % alphabet.size)}
+		}
+		}
+		);
+
+		println("Encrypted Text:" + encryptxt)
+	
+
+
+} 
