@@ -1,0 +1,31 @@
+import scala.math._
+
+
+
+case class Point(a: Int, b: Int){
+def x: Int =a
+def y: Int =b
+
+def add(p: Point)=new Point(x+p.x , y+p.y)
+
+def move(dx: Int, dy: Int)=new Point(x+dx , y+dy)
+
+def distance(p1: Point,p2: Point) : Int={
+
+var distance:Int = 0
+
+distance =Math.sqrt((p2.x-p1.x)*(p2.x-p1.x) + (p2.y-p1.y)*(p2.y-p1.y))
+
+return distance
+}
+
+def invert(p: Point) =new Point(p.y , p.x)
+
+}
+
+object Test{
+def main(args: Array[String]) {
+
+
+}
+}
